@@ -1,0 +1,25 @@
+version: "3"
+
+services:
+
+  mongodb:
+    image: mongo
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+
+  backend:
+    build: ./Gobus-backend
+    container_name: backend
+    ports:
+      - "8086:8080"
+    depends_on:
+      - mongodb
+
+  frontend:
+    build: ./Gobus-frontend
+    container_name: frontend
+    ports:
+      - "3001:3000"
+    depends_on:
+      - backend
