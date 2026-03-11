@@ -1,0 +1,12 @@
+# Environment files
+.env
+
+# Spring Boot secrets
+Gobus-backend/src/main/resources/application.properties
+
+# Node modules
+Gobus-frontend/node_modules
+
+# Build folders
+target
+build

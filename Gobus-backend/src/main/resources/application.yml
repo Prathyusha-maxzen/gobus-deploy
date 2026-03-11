@@ -1,0 +1,17 @@
+server:
+  port: 8080
+
+spring:
+  
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/sasitravelsbus
+
+    redis:
+      host: localhost
+      port: 6379
+
+jwt:
+  secret: sasitravelsbusSecretKey
+  expiration: 86400000
+

@@ -1,0 +1,43 @@
+/* src/index.css or src/tailwind.css */
+    @tailwind base;
+    @tailwind components;
+    @tailwind utilities;
+/* Loader Bar */
+.loader-bar {
+  position: relative;
+  width: 250px;
+  height: 30px;
+  background: #b1b1b1;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+/* Moving Orange Progress */
+.loader-bar::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 0%;
+  /* background: orange; */
+  animation: progress 3s linear infinite;
+}
+
+/* Bus Moving */
+.bus-progress {
+  position: absolute;
+  top: 0px;
+  width: 40px;
+  animation: busMove 3s linear infinite;
+}
+
+/* Progress Animation */
+@keyframes progress {
+  from { width: 0%; }
+  to { width: 100%; }
+}
+
+/* Bus Movement */
+@keyframes busMove {
+  from { left: -40px; }
+  to { left: 260px; }
+}
