@@ -12,7 +12,7 @@ services:
     build: ./Gobus-backend
     container_name: backend
     ports:
-      - "8080:8080"
+      - "8086:8080"
     depends_on:
       - mongodb
 
@@ -20,7 +20,8 @@ services:
     build: ./Gobus-frontend
     container_name: frontend
     ports:
-      - "3000:3000"
+      - "3001:3000"
     depends_on:
 
       - backend
+
